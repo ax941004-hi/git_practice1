@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人自我介紹 | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS 樣式區 --- */
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #667eea;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            background-color: var(--bg-light);
+        }
+
+        /* 導覽列 */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 英雄區 (Hero Section) */
+        header {
+            height: 80vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            color: #ffde59;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #fff;
+            color: #764ba2;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* 內容區塊通用樣式 */
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .content-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        /* 響應式設定 */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            nav ul { display: none; } /* 手機版暫時隱藏選單，實務上會做漢堡選單 */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PORTFOLIO</div>
+        <ul>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#skills">專業技能</a></li>
+            <li><a href="#contact">聯絡我</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>你好，我是 <span class="highlight">你的名字</span></h1>
+            <p>熱衷於網頁前端開發與互動設計的學習者</p>
+            <a href="#about" class="btn">進一步瞭解</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>關於我</h2>
+        <div class="content-box">
+            <p>
+                你好！我目前是一名對技術充滿熱忱的開發者。我喜歡將複雜的問題簡化為優雅的程式碼，並致力於創造直觀、流暢的使用者體驗。
+                在開發過程中，我除了注重程式碼的品質，也對排版細節與色彩搭配有一定的堅持。
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>專業技能</h2>
+        <div class="content-box">
+            <ul style="list-style: inside square;">
+                <li>HTML5 / CSS3 語意化切版</li>
+                <li>Responsive Web Design (RWD) 響應式設計</li>
+                <li>JavaScript 基礎與 DOM 操作</li>
+                <li>Git 版本控制系統</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 你的名字. Powered by Gemini Designer.</p>
+    </footer>
+
+</body>
+</html>
